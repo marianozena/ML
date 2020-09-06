@@ -16,11 +16,12 @@ Verde: #39b54a;
 body {
   width: 100vw;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   background-color: #ebebeb;
 }
 
 a {
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 ul {
@@ -72,11 +73,11 @@ form {
 }
 
 label, .txtRadio {
-  font-size: 12px;
+  font-size: 0.75em;
   margin: 5px 0px;
 }
 
-input, .btn {
+input[!type=search], .btn {
   width: 100%;
   border-radius: 5px;
   border-width: 0px;
@@ -106,22 +107,24 @@ input[type=submit], input[type=reset] {
 }
 
 .precios {
-  font-size: 18px;
+  font-size: 1.25em;
 }
 
 .descuentos {
-  font-size: 16px;
+  font-size: 1em;
   color: #39b54a;
 }
 
 .descripciones {
-  font-size: 16px;
+  display: none;
+  font-size: 1em;
   font-weight: normal;
   color: #666;
 }
 
 .fa-truck {
   color: #39b54a;
+  transition: 1s;
 }
 
 .fa-credit-card, .fa-gift, .fa-user-shield {
@@ -130,13 +133,13 @@ input[type=submit], input[type=reset] {
 
 .f1 {
   color: #666;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
 }
 
 .f2 {
   color: #666;
-  font-size: 14px;
+  font-size: 0.75em;
   font-weight: normal;
 }
 
@@ -155,6 +158,26 @@ input[type=submit], input[type=reset] {
   max-width: 320px;
 }
 
+.lv:hover .descripciones, .of:hover .descripciones {
+  display: block;
+  box-shadow: ​0px​ ​0px​ ​10px​ ​rgb​(​100​, ​100​, ​100​);
+}
+
+.lv:hover .fa-truck, .of:hover .fa-truck {
+  transform: rotate(360deg);
+  animation-name: trans;
+  animation-duration: 3s;  
+}
+
+@keyframes trans {
+  from {color: #39b54a;}
+  to {color: rgb(255, 0, 43);}
+}
+
+.lv:hover, .of:hover {
+  box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.90);
+}
+
 .formCont {
   margin: 10px auto;
 }
@@ -168,16 +191,32 @@ input[type=submit], input[type=reset] {
   background-color: #CC1155;
 }
 
-.searchIcon {
-  width: 10%;
+.contSearch {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.search {
+  flex-grow: 1;
+  border-width: 0px;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .fa-search {
+  flex-grow: 0;
   color: #666;
-  text-align: right;
+  padding-right: 5px;
 }
 
-#logo{
+.contLogo {
   width: 50%;
   margin: auto;
   padding: 3px 0;
@@ -205,19 +244,6 @@ input[type=submit], input[type=reset] {
   display: none;
 }
 
-#contSearch {
-  width: 50%;
-  margin: auto;
-  background-color: #fff;
-  border-radius: 5px;
-  min-width: 300px;
-}
-
-#search {
-  width: 90%;
-  min-width: 155px;
-}
-
 #banner {
   width: inherit;
 }
@@ -228,8 +254,13 @@ input[type=submit], input[type=reset] {
 }
 
 @media (min-width: 361px) {
-
   body {
     background: red;
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    background: rgb(0, 255, 42);
   }
 }
