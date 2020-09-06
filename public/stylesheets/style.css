@@ -14,7 +14,7 @@ Verde: #39b54a;
 }
 
 body {
-  width: 400px;
+  width: 100vw;
   font-family: 'Roboto', sans-serif;
   background-color: #ebebeb;
 }
@@ -105,12 +105,6 @@ input[type=submit], input[type=reset] {
   background-color: #AA0044;
 }
 
-.ultimaVisita {
-  width: 400px;
-  font-size: 24px;
-  background-color: #ebebeb;
-}
-
 .precios {
   font-size: 18px;
 }
@@ -155,9 +149,10 @@ input[type=submit], input[type=reset] {
 
 .lv, .of {
   border-radius: 20px;
-  margin: 20px 20px;
+  margin: 20px auto;
   background-color: #fff;
   padding: 15px 0;
+  max-width: 320px;
 }
 
 .formCont {
@@ -177,14 +172,16 @@ input[type=submit], input[type=reset] {
   width: 10%;
 }
 
-.fa-search{
+.fa-search {
   color: #666;
+  text-align: right;
 }
 
-#logo, #search {
+#logo{
   width: 50%;
   margin: auto;
   padding: 3px 0;
+  max-width: 200px;
 }
 
 #btnMenu {
@@ -213,10 +210,12 @@ input[type=submit], input[type=reset] {
   margin: auto;
   background-color: #fff;
   border-radius: 5px;
+  min-width: 300px;
 }
 
 #search {
-  width: 85%;
+  width: 90%;
+  min-width: 155px;
 }
 
 #banner {
@@ -226,4 +225,11 @@ input[type=submit], input[type=reset] {
 #img {
   display: block;
   width: 100%;
+}
+
+@media (min-width: 361px) {
+
+  body {
+    background: red;
+  }
 }
