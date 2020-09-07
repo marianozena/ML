@@ -4,8 +4,16 @@
   box-sizing: border-box;
 }
 
+html{
+  height: 100vh;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   width: 100vw;
+  height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   background-color: #ebebeb;
@@ -26,13 +34,14 @@ li {
 }
 
 h2 {
+  display: block;
   background-color: #ebebeb;
   padding: 20px 0px;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
-Header {
+header {
   width: inherit;
   background-color: #EAC926;
   padding: 3px 0px;
@@ -86,7 +95,7 @@ footer {
   width: inherit;
   color: #666;
   background-color: #fff;
-  padding: 5px;
+  padding: 1em;
 }
 
 .btn {
@@ -140,7 +149,7 @@ footer {
 .copy {
   display: block;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.75em;
   margin-top: 5px;
   color: #414040;
 }
@@ -168,8 +177,10 @@ footer {
   box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.90);
 }
 
-.formCont {
+
+.formCont, .formRegistro{
   margin: 10px auto;
+  flex-grow: 1;
 }
 
 .formPerfil, .formNombre, .formInt, .formUser {
@@ -255,6 +266,13 @@ footer {
 #img {
   display: block;
   width: 100%;
+}
+
+#lastVisited, #ofertas{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 @media (min-width: 361px) {
