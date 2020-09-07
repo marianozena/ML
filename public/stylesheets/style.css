@@ -42,11 +42,6 @@ main {
   width: inherit;
 }
 
-footer {
-  width: inherit;
-  color: #666;
-}
-
 img {
   display: block;
   width: 90%;
@@ -56,6 +51,7 @@ img {
 form {
   width: 80%;
   margin: auto;
+  max-width: 282px;
 }
 
 label, .txtRadio {
@@ -79,6 +75,18 @@ input[type=submit], input[type=reset] {
   width: 25%;
   margin: 10px auto;
   border-width: 1px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: inherit;
+  color: #666;
+  background-color: #fff;
+  padding: 5px;
 }
 
 .btn {
@@ -130,6 +138,7 @@ input[type=submit], input[type=reset] {
 }
 
 .copy {
+  display: block;
   text-align: center;
   font-size: 12px;
   margin-top: 5px;
@@ -174,15 +183,14 @@ input[type=submit], input[type=reset] {
 
 .contHead {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
 .contLogo {
-  width: 50%;
   margin: auto;
   padding: 3px 0;
-  max-width: 200px;
+  width: 200px;
 }
 
 .contSearch {
@@ -190,10 +198,11 @@ input[type=submit], input[type=reset] {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  width: 50%;
   margin: auto;
   background-color: #fff;
   border-radius: 5px;
+  width: 50%;
+  min-width: 200px;
 }
 
 .search {
@@ -208,16 +217,6 @@ input[type=submit], input[type=reset] {
   flex-grow: 0;
   color: #666;
   padding-right: 5px;
-}
-
-footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-around;
-  background-color: #fff;
-  padding: 5px;
 }
 
 .footer {
@@ -259,17 +258,30 @@ footer {
 }
 
 @media (min-width: 361px) {
-  body {
-    background: red;
+  .contHead {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 @media (min-width: 769px) {
-  body {
-    background: rgb(0, 255, 42);
+  #btnMenu {
+    display: none;
   }
   .contFooterItm {
     width: 30vw;
+  }
+  #nav1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navMenu {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    justify-content: space-around;
   }
 }
 
