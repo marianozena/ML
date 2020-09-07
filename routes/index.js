@@ -3,11 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
-router.get('/clase1', function(req, res, next) {
-  res.render('clase1', { title: 'Mercado Liebre' });
+  res.render('index', { title: 'Mercado Liebre' });
 });
 
 router.get('/registro', function(req, res, next) {
@@ -15,7 +11,7 @@ router.get('/registro', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Registro' });
+  res.render('login', { title: 'Login' });
 });
 
 
